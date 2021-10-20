@@ -2,7 +2,7 @@
   <head>
     <style>
       /* General settings */
-      body {font-family: Bitstream Vera Sans Mono;
+      body {font-family: Lucida Sans Typewriter,Lucida Console,monaco,Bitstream Vera Sans Mono,monospace;
 	    background: white;
 	    margin-left: 160px;
 	    margin-right: 160px;}
@@ -24,22 +24,23 @@
       /* Links */
       .link {color: slateGray;
 	     font-size: 20px;
-	     font-family: Bitstream Vera Sans Mono;}
+	     font-family: Lucida Sans Typewriter,Lucida Console,monaco,Bitstream Vera Sans Mono,monospace;}
       /* Main text */
       p {color: Gray;
-	 font-size: 20px;
-	 text-align: justify;
-	 text-justify: inter-word;}
+	 font-size: 18px;}
+      p.abstract {
+	  text-align: justify;
+	  text-justify: inter-word;
+      }
       /* Collapsables */
       .collapsible {
 	  color: slateGray;
 	  cursor: pointer;
 	  border: none;
 	  background: none;
-	  text-align: left;
 	  outline: none;
-	  font-size: 20px;
-	  font-family: Bitstream Vera Sans Mono;}
+	  font-size: 18px;
+	  font-family: Lucida Sans Typewriter,Lucida Console,monaco,Bitstream Vera Sans Mono,monospace;}
       .active, .collapsible:hover {
 	  font-weight: bold;}
       .content {
@@ -58,7 +59,7 @@
     <h3>
       jkcshea [at] uchicago [dot] edu
     </h3>
-    <div>
+    <br>
       <p>
 	University of Chicago Economics Ph.D. Candidate.
       </p>
@@ -78,7 +79,7 @@
       <span class = "link">Draft available soon</span>
       <button type="button" class="collapsible"><u>Abstract</u></button>
       <div class="content">
-	<p>
+	<p class = "abstract">
 	  I construct a flexible test for racial bias in police traffic searches that is robust to sample selection and may be performed on individual officers.
 	  I do this using bilinear programming to analyze the search decisions of officers separately from the distribution of drivers stopped.
 	  The test relies on discrete instruments that shift the distributions of drivers stopped without shifting the officer’s search preference.
@@ -93,7 +94,7 @@
       <a href="files/ivmte.pdf"><span class = "link">Paper</span></a> <a href="https://github.com/jkcshea/ivmte"><span class = "link">R package (ivmte)</span></a>
       <button type="button" class="collapsible"><u>Abstract</u></button>
       <div class="content">
-	<p>
+	<p class = "abstract">
 	  Instrumental variable (IV) strategies are widely used to estimate causal effects in economics, political science, epidemiology, psychology, and other fields.
 	  When there is unobserved heterogeneity in causal effects, standard linear IV estimators only represent effects for complier subpopulations (Imbens and Angrist, 1994).
 	  Marginal treatment effect (MTE) methods (Heckman and Vytlacil, 1999, 2005) allow researchers to use additional assumptions to extrapolate beyond complier subpopulations.
@@ -112,7 +113,7 @@
       <a href="files/l1svr.pdf"><span class = "link">Paper</span></a> <a href="https://github.com/jkcshea/l1svr"><span class = "link">R package (l1svr)</span></a>
       <button type="button" class="collapsible"><u>Abstract</u></button>
       <div class="content">
-	<p>
+	<p class = "abstract">
 	  We provide large sample distribution theory for support vector regression (SVR) with l1-norm, along with error bars for the SVR regression coefficients.
 	  Although a classical Wald confidence interval obtains from our theory, its implementation inherently depends on the choice of a tuning parameter which scales the variance estimate and thus the width of the error bars.
 	  We address this shortcoming by further proposing an alternative large sample inference method based on the inversion of a novel test statistic which displays competitive power properties and does not depend on the choice of a tuning parameter.
