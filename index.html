@@ -1,30 +1,52 @@
 <html>
   <head>
     <style>
+      /* General settings */
+      body {font-family: Bitstream Vera Sans Mono;
+	    background: white;
+	    margin-left: 160px;
+	    margin-right: 160px;}
+      /* Main title header */
       h1 {color: slateGray;
-	  font-family: Bitstream Vera Sans Mono;
 	  text-align: center;
 	  font-size: 40px;
 	  font-weight: bold;
 	  margin-top:50px;}
+      /* Section headers */
       h2 {color: slateGray;
-	  font-family: Bitstream Vera Sans Mono;
 	  text-align: center;
 	  font-size: 30px;
 	  margin-top: 50px;}
+      /* Contact/other websites */
       h3 {color: slateGray;
-	  font-family: Bitstream Vera Sans Mono;
 	  text-align: center;
 	  font-size: 20px}
-      body {background: white}
+      /* Links */
+      .link {color: slateGray;
+	     font-size: 20px;
+	     font-family: Bitstream Vera Sans Mono;}
+      /* Main text */
       p {color: Gray;
-	 font-family: Bitstream Vera Sans Mono;
 	 font-size: 20px;
-	 margin-left: 160px;
-	 margin-right: 160px;
 	 text-align: justify;
 	 text-justify: inter-word;}
-      .link {color: slateGray;}
+      /* Collapsables */
+      .collapsible {
+	  color: slateGray;
+	  cursor: pointer;
+	  border: none;
+	  background: none;
+	  text-align: left;
+	  outline: none;
+	  font-size: 20px;
+	  font-family: Bitstream Vera Sans Mono;}
+      .active, .collapsible:hover {
+	  font-weight: bold;}
+      .content {
+	  padding: 0 0;
+	  display: none;
+	  overflow: hidden;
+      }
     </style>
   </head>
   <body>
@@ -36,71 +58,88 @@
     <h3>
       jkcshea [at] uchicago [dot] edu
     </h3>
-    <br>
-    <p>
-      University of Chicago Economics Ph.D. Candidate.
-    </p>
-    <p>
-      Fields: Applied Econometrics, Labor Economics.
-    </p>
-    <p>
-      Interests: Causal Inference, Discrimination.
-    </p>
-    <h2>
-      Working Papers
-    </h2>
-    <p>
-      <b> Detecting Racial Bias in Police Traffic Searches </b>
-      (Job Market Paper)
-    </p>
-    <p>
-      <span class = "link">Available soon</span>
-    </p>
-    <p>
-      <b> Abstract: </b>
-      I construct a flexible test for racial bias in police traffic searches that is robust to sample selection and may be performed on individual officers.
-      I do this using bilinear programming to analyze the search decisions of officers separately from the distribution of drivers stopped.
-      The test relies on discrete instruments that shift the distributions of drivers stopped without shifting the officer’s search preference.
-      This differs from current methods relying on continuous instruments that shift the preference of officers, which are invalid under sample selection.
-    </p>
-    <p>
-      <b> ivmte: An R Package for Implementing Marginal Treatment Effect Methods </b>
-      (submitted; with Alexander Torgovitsky)
-    </p>
-    <p>
+    <div>
+      <p>
+	University of Chicago Economics Ph.D. Candidate.
+      </p>
+      <p>
+	Fields: Applied Econometrics, Labor Economics.
+      </p>
+      <p>
+	Interests: Causal Inference, Discrimination.
+      </p>
+      <h2>
+	Working Papers
+      </h2>
+      <p>
+	<b> Detecting Racial Bias in Police Traffic Searches </b>
+	(Job Market Paper)
+      </p>
+      <span class = "link">Draft available soon</span>
+      <button type="button" class="collapsible"><u>Abstract</u></button>
+      <div class="content">
+	<p>
+	  I construct a flexible test for racial bias in police traffic searches that is robust to sample selection and may be performed on individual officers.
+	  I do this using bilinear programming to analyze the search decisions of officers separately from the distribution of drivers stopped.
+	  The test relies on discrete instruments that shift the distributions of drivers stopped without shifting the officer’s search preference.
+	  This differs from current methods relying on continuous instruments that shift the preference of officers, which are invalid under sample selection.
+	</p>
+      </div>
+      
+      <p>
+	<b> ivmte: An R Package for Implementing Marginal Treatment Effect Methods </b>
+	(submitted; with Alexander Torgovitsky)
+      </p>
       <a href="files/ivmte.pdf"><span class = "link">Paper</span></a> <a href="https://github.com/jkcshea/ivmte"><span class = "link">R package (ivmte)</span></a>
-    </p>
-    <p>
-      <b> Abstract: </b>
-      Instrumental variable (IV) strategies are widely used to estimate causal effects in economics, political science, epidemiology, psychology, and other fields.
-      When there is unobserved heterogeneity in causal effects, standard linear IV estimators only represent effects for complier subpopulations (Imbens and Angrist, 1994).
-      Marginal treatment effect (MTE) methods (Heckman and Vytlacil, 1999, 2005) allow researchers to use additional assumptions to extrapolate beyond complier subpopulations.
-      We discuss a flexible framework for MTE methods based on linear regression and the generalized method of moments.
-      We show how to implement the framework using the ivmte package for R.
-    </p>
-    <h2>
-      Publications
-    </h2>
-    <p>
-      <b> Inference for Support Vector Regression with l1 Regularization </b>
-      (AEA Papers and Proceedings, 2021; with Yuehao Bai, Hung Ho, Guillaume A. Pouliot)
-    </p>
-    <p>
+      <button type="button" class="collapsible"><u>Abstract</u></button>
+      <div class="content">
+	<p>
+	  Instrumental variable (IV) strategies are widely used to estimate causal effects in economics, political science, epidemiology, psychology, and other fields.
+	  When there is unobserved heterogeneity in causal effects, standard linear IV estimators only represent effects for complier subpopulations (Imbens and Angrist, 1994).
+	  Marginal treatment effect (MTE) methods (Heckman and Vytlacil, 1999, 2005) allow researchers to use additional assumptions to extrapolate beyond complier subpopulations.
+	  We discuss a flexible framework for MTE methods based on linear regression and the generalized method of moments.
+	  We show how to implement the framework using the ivmte package for R.
+	</p>
+      </div>
+      <h2>
+	Publications
+      </h2>
+      <p>
+	<b> Inference for Support Vector Regression with l1 Regularization </b>
+	(AEA Papers and Proceedings, 2021; with Yuehao Bai, Hung Ho, Guillaume A. Pouliot)
+      </p>
+      
       <a href="files/l1svr.pdf"><span class = "link">Paper</span></a> <a href="https://github.com/jkcshea/l1svr"><span class = "link">R package (l1svr)</span></a>
-    </p>
-    <p>
-      <b> Abstract: </b>
-      We provide large sample distribution theory for support vector regression (SVR) with l1-norm, along with error bars for the SVR regression coefficients.
-      Although a classical Wald confidence interval obtains from our theory, its implementation inherently depends on the choice of a tuning parameter which scales the variance estimate and thus the width of the error bars.
-      We address this shortcoming by further proposing an alternative large sample inference method based on the inversion of a novel test statistic which displays competitive power properties and does not depend on the choice of a tuning parameter.
-    </p>
-    <h2>
-      Teaching
-    </h2>
-    <p> Econometrics (undergraduate), University of Chicago, Lecturer (<a href="files/evaluations.pdf"><span class = "link">Evaluations</span></a>; received graduate teaching award) </p>
-    <p> Optimization Conscious Econometrics (2nd year Ph.D.), University of Chicago, Teaching Assistant </p>
-    <p> Applied Microeconometrics (2nd year Ph.D.), University of Chicago, Teaching Assistant </p>
-    <p> Econometrics III (1st year Ph.D.), University of Chicago, Teaching Assistant </p>
-    <br>
+      <button type="button" class="collapsible"><u>Abstract</u></button>
+      <div class="content">
+	<p>
+	  We provide large sample distribution theory for support vector regression (SVR) with l1-norm, along with error bars for the SVR regression coefficients.
+	  Although a classical Wald confidence interval obtains from our theory, its implementation inherently depends on the choice of a tuning parameter which scales the variance estimate and thus the width of the error bars.
+	  We address this shortcoming by further proposing an alternative large sample inference method based on the inversion of a novel test statistic which displays competitive power properties and does not depend on the choice of a tuning parameter.
+	</p>
+      </div>
+      <h2>
+	Teaching
+      </h2>
+      <p> Econometrics (undergraduate), University of Chicago, Lecturer (<a href="files/evaluations.pdf"><span class = "link">Evaluations</span></a>; received graduate teaching award) </p>
+      <p> Optimization Conscious Econometrics (2nd year Ph.D.), University of Chicago, Teaching Assistant </p>
+      <p> Applied Microeconometrics (2nd year Ph.D.), University of Chicago, Teaching Assistant </p>
+      <p> Econometrics III (1st year Ph.D.), University of Chicago, Teaching Assistant </p>
+      <div>
+	<script>
+	  var coll = document.getElementsByClassName("collapsible");
+	  var i;
+	  for (i = 0; i < coll.length; i++) {
+	      coll[i].addEventListener("click", function() {
+		  this.classList.toggle("active");
+		  var content = this.nextElementSibling;
+		  if (content.style.display === "block") {
+		      content.style.display = "none";
+		  } else {
+		      content.style.display = "block";
+		  }
+	      });
+	  }
+	</script>
   </body>
 </html>
