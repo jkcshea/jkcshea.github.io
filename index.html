@@ -14,13 +14,6 @@
   	    background: white;
   	    margin-left: 160px;
   	    margin-right: 160px;}
-      /*margins for mobile site*/
-      @media screen and (max-width: 992px) {
-          body {
-              margin-left: 30px;
-              margin-right: 30px;
-          }
-      }      
       /* Main title header */
       h1 {color: slateGray;
   	  text-align: center;
@@ -62,6 +55,16 @@
   	  padding: 0 0;
   	  display: none;
   	  overflow: hidden;
+      }
+      /*margins for mobile site*/
+      @media screen and (max-width: 800px) {
+          body {
+              margin-left: 30px;
+              margin-right: 30px;
+          }
+	  p.abstract {
+	      text-align: left;
+	  }
       }
     </style>
   </head>
